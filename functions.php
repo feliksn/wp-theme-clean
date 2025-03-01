@@ -10,6 +10,6 @@ function add_scripts() {
 	// Theme scripts
 	wp_enqueue_script('jq', get_template_directory_uri() . '/lib/jquery/jquery-3.7.1.min.js',[],'',true);
 	wp_enqueue_script('bootstrap', get_template_directory_uri().'/lib/bootstrap/bootstrap.bundle.min.js',[],'',true);
-	wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js');
+	wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', [], '', true);
 }
 ?>
