@@ -1,22 +1,26 @@
 <?php get_header(); ?>
 
-<!-- Функция ВП проверяет существуют ли вообще записи -->
-<?php if( have_posts() ) { ?>
-    <!-- Если записи существуют, то запускаем цикл while (подобный foreach только без дополнительных парапетров) -->
-    <?php while( have_posts() ) { ?>
-        <!-- the_post() - главная функция для отображения любой записи. Вызвается в самом начале цикла. Активирует все остальные функции для записи, такие как the_title(), the_content()... и много других             -->
-        <?php the_post(); ?>
-        <!-- Функция отображения названия записи (подобно как для страницы) -->
-        <h1><?php the_title(); ?></h1>
-        <!-- Функция отображения контента записи, то что создадим в редакторе -->
-        <?php the_content(); ?>
-    
-    <?php } ?>
+<div class="container">
+    <div class="row">
+        <?php if( have_posts() ) { ?>
+            <?php while( have_posts() ) { ?>
+                <?php the_post(); ?>
+                <div class="card mb-3 shadow-sm border-light-subtle rounded-0">
+                    <div class="card-body">
+                        <h5 class="card-title"> <?php the_title(); ?> </h5>
+                        <p class="card-text">
+                            <?php the_content(); ?>
+                        </p>
+                        <a href="#" class="card-link">Ссылка на страницу записи</a>
+                    </div>
+                </div>
+            <?php } ?>
+        <?php } else { ?>
+            <h5>Записей не найдено!</h5>
+        <?php } ?>
+    </div>
+</div>
 
-<?php } else { ?>
-    <!-- Если записей нет, то показываем сообщение -->
-    Записей не найдено!
-<?php } ?>
 
 
 <?php get_footer(); ?>
