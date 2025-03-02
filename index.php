@@ -11,7 +11,7 @@
                         <p class="card-text">
                             <?php the_content(); ?>
                         </p>
-                        <a href="#" class="card-link">Ссылка на страницу записи</a>
+                        <a href="<?php the_permalink(); ?>" class="card-link">Ссылка на страницу записи</a>
                     </div>
                 </div>
             <?php } ?>
