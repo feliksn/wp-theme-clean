@@ -8,6 +8,14 @@
 </head>
 
 <body>
-	<header>
-		<?php wp_nav_menu(); ?>
+	<header class="mb-3 border-bottom">
+		<div class="container">
+			<?php
+				wp_nav_menu([
+					'container' => '',
+					'menu_id' => 'menu-list',
+					'menu_class' => 'nav list-unstyled'
+				]); 
+			?>
+		</div>
 	</header>
