@@ -1,5 +1,7 @@
 <?php
 
+// Добавить поддержку меню
+add_theme_support("menus");
 
 add_action('wp_enqueue_scripts', 'add_scripts');
 function add_scripts() {
