@@ -12,6 +12,12 @@
                             <?php the_content(); ?>
                         </p>
                         <a href="<?php the_permalink(); ?>" class="card-link">Ссылка на страницу записи</a>
+                        <div class="mt-3">
+                            Рубрики: <?php the_category(); ?>
+                        </div>
+                        <div class="mt-3">
+                            <?php the_tags(); ?>
+                        </div>
                     </div>
                 </div>
             <?php } ?>
