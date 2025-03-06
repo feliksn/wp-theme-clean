@@ -13,7 +13,7 @@
                         </div>
                         <a href="<?php the_permalink(); ?>" class="card-link">Ссылка на страницу записи</a>
                         <div class="mt-3">
-                            Рубрики: <?php the_category(); ?>
+                            Категории: <?php the_category( ' > ', 'multiple'); ?>
                         </div>
                         <div class="mt-3">
                             <?php the_tags(); ?>
