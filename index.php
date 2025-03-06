@@ -8,9 +8,9 @@
                 <div class="card mb-3 shadow-sm border-light-subtle rounded-0">
                     <div class="card-body">
                         <h5 class="card-title"> <?php the_title(); ?> </h5>
-                        <p class="card-text">
+                        <div class="card-text">
                             <?php the_content(); ?>
-                        </p>
+                        </div>
                         <a href="<?php the_permalink(); ?>" class="card-link">Ссылка на страницу записи</a>
                         <div class="mt-3">
                             Рубрики: <?php the_category(); ?>
